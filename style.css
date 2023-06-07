@@ -81,4 +81,8 @@ p {
   .container {
     padding: 50px 10px;
   }
+  
+  .title {
+    font-size: 24px;
+  }
 }
