@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site de Criptografia</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="criptografia.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Encrypt tool </h1>
+
+    <div class="section">
+      <h2>Criptografar</h2>
+      <textarea id="texto-para-criptografar" rows="4" cols="50" placeholder="Insira o texto a ser criptografado"></textarea>
+      <button onclick="criptografar()">Criptografar</button>
+      <p id="texto-criptografado"></p>
+    </div>
+
+    <div class="section">
+      <h2>Descriptografar</h2>
+      <textarea id="texto-para-descriptografar" rows="4" cols="50" placeholder="Insira o texto criptografado"></textarea>
+      <button onclick="descriptografar()">Descriptografar</button>
+      <p id="texto-descriptografado"></p>
+    </div>
+  </div>
+
+  <script>
+    function criptografar() {
+      var texto = document.getElementById("texto-para-criptografar").value;
+      var textoCriptografado = criptografarTexto(texto);
+      document.getElementById("texto-criptografado").innerText = textoCriptografado;
+    }
+
+    function descriptografar() {
+      var textoCriptografado = document.getElementById("texto-para-descriptografar").value;
+      var textoDescriptografado = descriptografarTexto(textoCriptografado);
+      document.getElementById("texto-descriptografado").innerText = textoDescriptografado;
+    }
+  </script>
+</body>
+</html>
