@@ -59,4 +59,26 @@ p {
   position: absolute;
   top: 0;
   width: 0;
- 
+  height: 0;
+  border-style: solid;
+}
+
+.container:before {
+  left: 0;
+  border-width: 0 0 100px 100vw;
+  border-color: transparent transparent #0077cc transparent;
+  z-index: -1;
+}
+
+.container:after {
+  right: 0;
+  border-width: 100px 100vw 0 0;
+  border-color: #00aaff transparent transparent transparent;
+  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 50px 10px;
+  }
+}
